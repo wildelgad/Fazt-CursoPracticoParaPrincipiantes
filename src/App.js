@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+function HeyJupiter(props){
+  console.log("este es el: " + props.envioTexto)
+  return(
+    <div id="jupit">
+      <h2>Viajando a Jupiter...</h2>
+      {props.envioTexto}
+      {props.otraProps}
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Nuevo Titulón</h2>
+        <HeyJupiter envioTexto="- Primer viaje a Jupiter" />
+        <HeyJupiter envioTexto="- Segundo viaje a Jupiter"/>
+        <HeyJupiter otraProps="Aterrizaje forzoso"/>
     </div>
   );
 }
