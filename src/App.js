@@ -10,7 +10,8 @@ class App extends Component{
 
   render(){
     return <div>
-      {this.state.tasks.map(e=> <h1>{e.description}</h1>)}
+      {this.state.tasks.map(e=> <h1 key={e.id}>
+        {e.title}</h1>)}
     </div>
   }
 }
